@@ -16,6 +16,6 @@
   <author href="https://github.com/jeronimobarea/notas-rapidas">
       Jeronimo Barea
   </author>
-
+      <icon src="icono.png" />
     <icon src="icono.png" platform="android" qualifier="fr-xxhdpi" />
 </widget>
