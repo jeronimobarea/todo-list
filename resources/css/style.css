@@ -1,0 +1,262 @@
+@charset "UTF-8";
+
+body {
+    background: whitesmoke;
+    padding: 80px 0 0 0;
+}
+
+body,
+input,
+button {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.noFill {
+    fill: none;
+}
+
+header {
+    width: 100%;
+    height: 80px;
+    position: fixed;
+    padding: 15px;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    background: #394747;
+}
+
+header input {
+    width: 100%;
+    height: 50px;
+    min-width: 250px;
+    float: left;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 400;
+    text-indent: 20px;
+    padding: 0 60px 0 10px;
+    background: rgba(255, 255, 255, 0.2);
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+    border: 0px;
+    box-shadow: none;
+    outline: none;
+
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+}
+
+header input::-webkit-input-placeholder {
+    color: rgba(255, 255, 255, 0.75)
+}
+
+header input::-moz-input-placeholder {
+    color: rgba(255, 255, 255, 0.75)
+}
+
+header input:-ms-input-placeholder {
+    color: rgba(255, 255, 255, 0.75)
+}
+
+header button {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+    top: 15px;
+    right: 15px;
+    z-index: 2;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.2);
+    border: 0;
+    outline: none;
+    box-shadow: none;
+
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+}
+
+header button svg {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -8px 0 0 -8px;
+}
+
+header button svg .fill {
+    fill: #7eb7b7;
+}
+
+.contenedor {
+    width: 100%;
+    float: left;
+    padding: 15px;
+}
+
+ul.lista {
+    width: 100%;
+    float: left;
+}
+
+ul.lista li {
+    width: 100%;
+    min-height: 50px;
+    float: left;
+    font-size: 14px;
+    font-weight: 500;
+    color: dimgray;
+    line-height: 22px;
+    word-break: break-word;
+
+    background: #fff;
+    position: relative;
+    box-shadow: 0px 1px 2px rgba(44, 62, 80, 0.12);
+    margin: 0 0 10px 0;
+    padding: 14px 100px 14px 14px;
+}
+
+ul.lista li:last-of-type {
+    margin: 0;
+}
+
+ul.lista li .botones {
+    width: 100px;
+    height: 50px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+ul.lista li .botones button {
+    width: 50px;
+    height: 50px;
+    float: left;
+    background: none;
+    position: relative;
+    border: 0px;
+    box-shadow: none;
+    outline: none;
+    cursor: pointer;
+
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+}
+
+ul.lista li .botones button:last-of-type::before {
+    content: '';
+    width: 1px;
+    height: 30px;
+    position: absolute;
+    top: 10px;
+    left: 0;
+    background: #394747;
+}
+
+ul.lista li .botones button.acabado svg {
+    border-radius: 11px;
+    border: 1.3px solid #1d996b;
+
+    -webkit-transition: fill 0.2s ease;
+    -moz-transition: fill 0.2s ease;
+    -ms-tansition: fill 0.2s ease;
+    -o-transtition: fill 0.2s ease;
+    transition: background 0.2s ease;
+}
+
+ul.lista#completado li .botones button.acabado svg {
+    background: #1d996b;
+    border: 0px;
+}
+
+ul.lista:not(#completado) li .botones button.acabado:hover svg {
+    background: rgba(29, 153, 107, 0.7);
+}
+
+ul.lista:not(#completado) li .botones button.acabado:hover svg .fill {
+    fill: #fff;
+}
+
+ul.lista#completado li .botones button.acabado svg .fill {
+    fill: #fff;
+}
+
+ul.lista li .botones button svg {
+    width: 22px;
+    height: 22px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -11px 0 0 -11px;
+}
+
+ul.lista li .botones button svg .fill {
+    -webkit-transition: fill 0.2s ease;
+    -moz-transition: fill 0.2s ease;
+    -ms-tansition: fill 0.2s ease;
+    -o-transtition: fill 0.2s ease;
+    transition: fill 0.2s ease;
+}
+
+ul.lista li .botones button.borrar svg .fill {
+    fill: lightslategray;
+}
+
+
+ul.lista li .botones button.borrar:hover svg .fill {
+    fill: crimson;
+
+}
+
+ul.lista li .botones button.acabado svg .fill {
+    fill: #1d996b;
+}
+
+ul.lista#completado {
+    position: relative;
+    padding: 60px 0 0 0;
+}
+
+ul.lista#completado:before {
+    content: '';
+    width: 250px;
+    height: 1px;
+    background: #bababa;
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    margin: 0 0 0 -125px;
+}
+
+ul.lista#hacer:empty:after {
+    content: 'No tienes nada por hacer.';
+    margin: 15px 0 0 0;
+}
+
+ul.lista#completado:empty:after {
+    content: 'No tienes nada completado.';
+
+}
+
+ul.lista#hacer:after,
+ul.lista#completado:after {
+    width: 100%;
+    display: block;
+    text-align: center;
+    font-size: 12px;
+    color: #aaa;
+}
