@@ -1,5 +1,10 @@
 @charset "UTF-8";
 
+@-ms-viewport{
+    width: device-width;
+    height: device-height;
+  }
+
 body {
     background: whitesmoke;
     padding: 80px 0 0 0;
@@ -23,7 +28,7 @@ header {
     top: 0;
     left: 0;
     z-index: 5;
-    background: #394747;
+    background: #f48c42;
 }
 
 header input {
@@ -39,8 +44,8 @@ header input {
     background: rgba(255, 255, 255, 0.2);
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
-    border-top-right-radius: 5px;
+    border-bottom-right-radius: 25px;
+    border-top-right-radius: 25px;
     border: 0px;
     box-shadow: none;
     outline: none;
@@ -68,13 +73,12 @@ header button {
     width: 50px;
     height: 50px;
     position: absolute;
-    border-bottom-right-radius: 5px;
-    border-top-right-radius: 5px;
+    border-radius: 25px;
     top: 15px;
     right: 15px;
     z-index: 2;
     cursor: pointer;
-    background: rgba(255, 255, 255, 0.2);
+    background: #fff;
     border: 0;
     outline: none;
     box-shadow: none;
@@ -96,7 +100,15 @@ header button svg {
 }
 
 header button svg .fill {
-    fill: #7eb7b7;
+    fill: #eeeeee;
+}
+
+header button:hover{
+    background: rgb(248, 248, 248);
+}
+
+header button:hover svg .fill {
+    fill: #ff5100;
 }
 
 .contenedor {
@@ -119,6 +131,7 @@ ul.lista li {
     color: dimgray;
     line-height: 22px;
     word-break: break-word;
+    border-radius: 5px;
 
     background: #fff;
     position: relative;
@@ -169,7 +182,7 @@ ul.lista li .botones button:last-of-type::before {
 
 ul.lista li .botones button.acabado svg {
     border-radius: 11px;
-    border: 1.3px solid #1d996b;
+    border: 1.3px solid #d46e2a;
 
     -webkit-transition: fill 0.2s ease;
     -moz-transition: fill 0.2s ease;
@@ -179,12 +192,12 @@ ul.lista li .botones button.acabado svg {
 }
 
 ul.lista#completado li .botones button.acabado svg {
-    background: #1d996b;
+    background: #d46e2a;
     border: 0px;
 }
 
 ul.lista:not(#completado) li .botones button.acabado:hover svg {
-    background: rgba(29, 153, 107, 0.7);
+    background: rgba(212, 110, 42, 0.50);
 }
 
 ul.lista:not(#completado) li .botones button.acabado:hover svg .fill {
@@ -223,7 +236,7 @@ ul.lista li .botones button.borrar:hover svg .fill {
 }
 
 ul.lista li .botones button.acabado svg .fill {
-    fill: #1d996b;
+    fill: #d46e2a;
 }
 
 ul.lista#completado {
@@ -243,13 +256,12 @@ ul.lista#completado:before {
 }
 
 ul.lista#hacer:empty:after {
-    content: 'No tienes nada por hacer.';
+    content: 'Enhorabuena no tienes nada por hacer.';
     margin: 15px 0 0 0;
 }
 
 ul.lista#completado:empty:after {
-    content: 'No tienes nada completado.';
-
+    content: 'Todavía no tienes nada completado.';
 }
 
 ul.lista#hacer:after,
